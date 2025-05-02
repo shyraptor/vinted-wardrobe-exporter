@@ -52,17 +52,10 @@ This workflow helps minimize the risk of being detected as a duplicate account w
    ```bash
    pip install -r requirements.txt
    ```
-
-## Required Dependencies
-
-- requests
-- beautifulsoup4
-- tqdm
-
-You can install all required dependencies with:
-```bash
-pip install requests beautifulsoup4 tqdm
-```
+   or
+   ```bash
+   pip install requests beautifulsoup4 tqdm
+   ```
 
 ## Usage
 
@@ -104,7 +97,7 @@ Note: Your cookies.json will contain more fields than shown in this example. The
 ### 2. Run the script
 
 ```bash
-python3 vinted_exporter.py
+python3 vinted-wardrobe-exporter.py
 ```
 
 ### 3. Follow the prompts
