@@ -1,7 +1,6 @@
 # Vinted Wardrobe Exporter
 
 ![License](https://img.shields.io/badge/License-MIT-blue)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-donate-orange)](https://buymeacoffee.com/shyraptor)
 
 A Python utility to export your entire Vinted wardrobe, including item details, images, and statistics.
 
@@ -12,6 +11,20 @@ A Python utility to export your entire Vinted wardrobe, including item details, 
 - Saves detailed metadata, human-readable summaries, and statistics
 - Packages everything into a convenient ZIP archive
 - Works with any Vinted country domain (vinted.fr, vinted.de, vinted.cz, etc.)
+
+## ⚡️ Why use this vs. Official Data Export?
+
+While Vinted offers an [official account data export](https://www.vinted.co.uk/help/1374), this tool offers several distinct advantages (and disadvantages) depending on your needs:
+
+| Feature | This Exporter Tool | Official Vinted Export |
+| :--- | :--- | :--- |
+| **Speed** | **Instant.** No waiting time. | Can take days to be sent to you. |
+| **Image Quality** | **Higher Quality.** Downloads less compressed images. | Compressed. |
+| **Access** | **Any Public Profile.** Can backup accounts even without login credentials (if public). | Only accessible if you can log in. |
+| **Scope** | **Listings Only.** Focuses on items, photos, and descriptions. | Includes private messages, settings, and logs. |
+| **Stability** | **Fragile.** Relies on web scraping; may break if site changes. | Guaranteed structure. |
+
+**Summary:** Use this tool if you need an instant backup of your *listings* and *photos* (e.g., for migrating accounts), or if you need to recover data from a public profile you can no longer access. Use the official export for legal data requests or private account history.
 
 ## Warning ⚠️
 
@@ -44,7 +57,7 @@ This workflow helps minimize the risk of being detected as a duplicate account w
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/vinted-wardrobe-exporter.git
+   git clone [https://github.com/yourusername/vinted-wardrobe-exporter.git](https://github.com/yourusername/vinted-wardrobe-exporter.git)
    cd vinted-wardrobe-exporter
    ```
 
@@ -71,6 +84,7 @@ This workflow helps minimize the risk of being detected as a duplicate account w
 8. Save them to a file named `cookies.json` in the same directory as the script
 
 Example cookies.json format:
+
 ```json
 {
   "Request Cookies": {
@@ -90,6 +104,7 @@ Example cookies.json format:
     "v_uid": "YOUR_VALUE_HERE"
   }
 }
+
 ```
 
 Note: Your cookies.json will contain more fields than shown in this example. The important cookies are `_vinted_fr_session`, `access_token_web`, and `refresh_token_web`.
@@ -98,19 +113,21 @@ Note: Your cookies.json will contain more fields than shown in this example. The
 
 ```bash
 python3 vinted-wardrobe-exporter.py
+
 ```
 
 ### 3. Follow the prompts
 
-- Enter your Vinted profile URL (e.g., vinted.fr/member/12345-username)
-- Specify a filename for the ZIP archive (or accept the default)
+* Enter your Vinted profile URL (e.g., vinted.fr/member/12345-username)
+* Specify a filename for the ZIP archive (or accept the default)
 
 ### 4. Wait for the export to complete
 
 The script will:
-- Scan your wardrobe
-- Download all item details and photos
-- Create a ZIP archive with everything
+
+* Scan your wardrobe
+* Download all item details and photos
+* Create a ZIP archive with everything
 
 ## Output Format
 
@@ -128,14 +145,15 @@ wardrobe_12345.zip
 ├── 123457/
 │   └── ...
 └── ...
+
 ```
 
 ## Limitations
 
-- The script can only export items from public wardrobes
-- You must be logged in (with valid cookies) to access most information
-- Rate limiting may affect exports of very large wardrobes
-- Closed/sold listings are skipped by default
+* The script can only export items from public wardrobes
+* You must be logged in (with valid cookies) to access most information
+* Rate limiting may affect exports of very large wardrobes
+* Closed/sold listings are skipped by default
 
 ## License
 
